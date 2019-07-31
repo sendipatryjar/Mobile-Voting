@@ -1,0 +1,55 @@
+<ion-header>
+        <p class="logo-header">#2019 TETAP TEGUH</p> 
+</ion-header>
+
+<ion-content>
+        <ion-card class="image">
+                <img src="assets/imgs/logo3.png"/>
+        </ion-card>
+
+
+<ion-card class="count">
+    <ion-row>
+            <ion-col col-4 >
+                    <p class="logo-text">Kecamatan</p> 
+                    <p class="logo-numb">29</p>
+                   
+            </ion-col>
+            <ion-col col-33>
+                    <p class="logo-text">Kelurahan</p> 
+                    <p class="logo-numb">611</p>
+                   
+            </ion-col>
+            <ion-col col-4>
+                    <p class="logo-text">TPS</p>
+                    <p class="logo-numb">11465</p>
+                   
+              </ion-col>
+    </ion-row>
+</ion-card>
+<ion-grid>
+        <ion-row class="button-row">
+                        <ion-col>
+                                        <button ion-button class="log-button"  (click)="perhitungan()">
+                                              <ion-col class="centering">
+                                                      <ion-icon name="clipboard" color="primary" ></ion-icon>
+                                                      <p class="logo-icon">FORM INPUT SUARA</p>
+                                                </ion-col>
+                                        </button>
+                                        </ion-col>
+                                        <ion-col>
+                                                        <button ion-button class="log-button" (click)="report()">
+                                                            <ion-col class="centering">
+                                                                  <ion-icon name="stats" color="primary" ></ion-icon>
+                                                                  <p class="logo-icon">REPORT SUARA</p>
+                                                            </ion-col>
+                                                        </button>
+                                                        </ion-col>
+        </ion-row>
+</ion-grid>
+<div>
+                <button ion-button class="logout-button" type="submit" (click)="logout()"><span class="span-button">Logout</span></button>
+</div>
+
+</ion-content>
+               

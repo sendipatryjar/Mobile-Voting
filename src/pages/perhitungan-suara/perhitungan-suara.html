@@ -1,0 +1,99 @@
+<!--
+  Generated template for the PerhitunganSuaraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="navbar-suara">
+    <ion-title>Kembali</ion-title>
+  </ion-navbar>
+  <!-- <ion-card color="primary" class="logo" > 
+      <p class="p-logo">FORM PERHITUNGAN SUARA</p>
+  </ion-card> -->
+</ion-header>
+ <ion-content padding>
+          <p class="p-input-field">NAMA LENGKAP RELAWAN</p>
+          <ion-input class="input-customer-code" disabled="true" type="text" name="name" value="{{name}}" *ngIf="name" ></ion-input>
+          <br>
+
+          <p class="p-input-field">DAERAH</p>
+          <ion-item class="input-customer-code" >
+            <ion-label class="p-input-tps">PILIH DAERAH / KOTA</ion-label>
+              <ion-select  [(ngModel)]="kotaa" (ionChange)="onKota($event)">
+              <ion-option *ngFor="let item of daerah"  value="{{item.kota}}"> {{item.kota}}</ion-option>
+            </ion-select>
+          </ion-item>
+          <!-- <ion-input class="input-customer-code" disabled="true" type="text" name="kota" value="{{kota}}" *ngIf="kota" ></ion-input>
+         -->
+          <br>
+          <p class="p-input-field">KECAMATAN</p>
+          <ion-input class="input-customer-code"  type="text" name="kecamatan" placeholder="Masukan Nama Kecamatan..."  [(ngModel)]="model.kecamatan"  ></ion-input>
+        
+          <br>  
+           <p class="p-input-field">KELURAHAN</p>
+           <ion-input class="input-customer-code" type="text" name="kelurahan" placeholder="Masukan Nama Kelurahan..."  [(ngModel)]="model.kelurahan" ></ion-input>
+         
+           <br>
+         <!-- <p class="p-input-field">NOMOR TPS</p>
+           <ion-input class="input-customer-code" disabled="true" type="text" name="tps" value="{{tps}}" *ngIf="tps"></ion-input>
+          -->
+          <p class="p-input-field">NOMOR TPS</p>
+          <ion-input class="input-customer-code" type="text" name="tps" placeholder="Masukan Nomor Tps..." [(ngModel)]="model.no_tps" ></ion-input>
+        
+          
+          <!-- <p class="p-input-field">NOMOR TPS</p>
+          <ion-item class="input-customer-code" >
+            <ion-label class="p-input-tps">PILIH NOMOR TPS...</ion-label>
+              <ion-select  [(ngModel)]="number" (ionChange)="onChange($event)">
+              <ion-option *ngFor="let item of items"  value="{{item.tps_id}}"> {{item.no_tps}}</ion-option>
+            </ion-select>
+          </ion-item> -->
+          
+           <br>
+          <p class="p-input-field">TOTAL SUARA Ir.H.Teguh Juwarno, M.Si</p>
+            <ion-input  type="number" pattern="[0-9]*" inputmode="numeric" class="input-suara"  name="bill-name" placeholder="Masukan jumlah suara..."  [(ngModel)]="model.total_votes_teguh" ></ion-input>
+          
+            <br>
+            <p class="p-input-field">TOTAL SUARA PAN + CALEG PAN + Ir.H.Teguh</p>
+            <ion-input  type="number" pattern="[0-9]*" inputmode="numeric" class="input-suara"   name="bill-name" placeholder="Masukan jumlah suara..."  [(ngModel)]="model.total_votes_pan"></ion-input>
+          <br>
+            <!-- <button ion-button full class="log-submit"(click)="upload()" [disabled]="model.total_votes_teguh == '' || model.total_votes_pan == ''">AMBIL FOTO</button>
+             -->
+            <button ion-button full class="colour-button" (click)="chooseFoto()" >
+              <ion-icon class="icon-button" name="camera"></ion-icon>Ambil Gambar</button>
+            <ion-item class="center-item">
+              
+                <ion-row *ngIf="imageURI">
+                    <p>{{imageURI}}</p>
+                </ion-row  >
+               
+            
+              
+                <h4>Image Preview</h4>
+                <img class="center-item" src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" (click)="deletePhoto()"/>
+              </ion-item>
+            
+<!-- 
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6 *ngFor="let photo of photos; let id = index">
+                  <ion-card class="block">
+                  <ion-icon  name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+                  <img  [src]="photo" *ngIf="photo"/>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </ion-grid> -->
+           
+      
+
+        <button ion-button class="log-button" type="submit" (click)="submit()" [disabled]="model.total_votes_teguh == '' || model.total_votes_pan == '' || imageFileName == '' ">SUBMIT</button>
+      
+             
+             
+              
+            
+      </ion-content>
+

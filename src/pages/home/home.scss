@@ -1,0 +1,160 @@
+page-home {
+ .page{
+    background: #f5f5f5;
+ }
+    .image{
+        margin-bottom: 15px;
+    }
+    .count{
+        align-items: center;
+        align-content: center;
+        border-radius: 6px; 
+        background: white;
+        margin-bottom: 5px;
+    }
+    .bottom{
+        align-items: center;
+        align-content: center;
+        border-radius: 6px; 
+        background: white;
+        bottom: 5px;
+    }
+   
+    .centering{
+        align-items: center;
+        align-content: center;
+        padding-left: 0%;
+    }
+   .image-teguh{
+       background-image: url(../../assets/imgs/logo3.png)
+   }
+    .logo{
+        padding-top: 1px;
+        //margin-top: 5px;
+        height: fit-content; 
+        width: fit-content;
+        object-fit: scale-down;
+    }
+    .bg{
+        border-radius: 6px; 
+        background: $app-background;
+        height: 60px;
+        width: 80px;
+        
+    }
+    .bg-kec{
+        border-radius: 6px; 
+        background: $app-background;
+        height: 75px;
+        width: 80px;
+        
+    }
+    // .scroll-content {
+    //     overflow: hidden !important;
+    // }
+    .icon-size{
+    height: 50px;
+    width: 50px;
+    color: white;
+    }
+    ion-icon {
+        font-size: 50px;
+      }
+    .logo-text{
+        margin-bottom: 2px;
+        font-family:Helvetica;
+        text-align: center;
+        font-size: 9px;
+        color: #000 ;
+        font-weight: 600;
+        line-height: 1.78;
+        
+    }
+    .logo-header{
+        margin-bottom: 2px;
+        font-family:Helvetica;
+        text-align: center;
+        font-size: 14px;
+        color:white ;
+        font-weight: 600;
+        line-height: 1.78;
+    }
+    .logo-numb{
+       
+        font-family:Helvetica;
+        text-align: center;
+        font-size: 18px;
+        color: #005BC8 ;
+        font-weight: 600;
+        line-height: 2; 
+    }
+    .logo-icon{
+        font-family:Helvetica;
+        text-align: center;
+        font-size: 9px;
+        color: black;
+        margin-left: 0%;
+        font-weight: 600;
+        line-height: 1.78; 
+    }
+    .button-icon{
+        position:absolute;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row-top{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-row{
+        position: absolute;
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+     .log-button {
+       height: 85%; 
+       width: 100%; 
+       border-radius: 6px; 
+       background: white;
+       box-shadow: #dedede;
+      }
+    }
+    .logout-button{
+        position: absolute;
+        margin-top: 115px;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 55px;
+        width: 94%;
+        border-radius: 5px;
+        background: #005bc8;
+        
+        }
+    .button-bot{
+        text-align: left;
+        padding-left: 5%;
+       
+        margin-top: 25%;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+    .header{
+        align-items: center;
+        align-content: center;
+        padding-top: 0%;
+        height: 50px;
+        width: 100%;
+        background-color: #005bc8;
+    }
+
+
+}

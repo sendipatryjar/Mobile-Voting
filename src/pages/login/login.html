@@ -1,0 +1,25 @@
+
+<ion-content padding class="no-scroll">
+  <ion-row>
+    <img src="assets/imgs/login.png" class="logo">
+</ion-row>
+<ion-row class="login-error" *ngIf="errorMessage">
+  <p>{{errorMessage}}</p>
+</ion-row>
+<div class="transparent-form">
+      <p class="p-input-field">MASUKKAN USER ADMIN</p>
+      <!-- <ion-item class="rounded-input"> -->
+          <!-- <ion-input class="input-customer-code" type="text" name="company-name" placeholder="Enter PIC Name" ></ion-input> -->
+        <ion-input autocomplete="true" class="input-customer-code"  type="number" pattern="[0-9]*" inputmode="tel" name="Username"  placeholder="Masukan user admin anda ..." [(ngModel)]="model.no_handphone"></ion-input>
+      <!-- </ion-item> -->
+      <br>
+      <div class="centering">
+        <button ion-button class="log-button" type="submit" (click)="login()"
+        [disabled]="model.nomor_handphone == ''"
+        ><span class="span-button">Login</span></button>
+      </div>
+      <br>
+  
+    </div>
+
+</ion-content>

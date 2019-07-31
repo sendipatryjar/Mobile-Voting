@@ -1,0 +1,76 @@
+
+<ion-header>
+
+  <ion-navbar class="navbar-report">
+        <ion-title>Kembali</ion-title>
+  </ion-navbar>
+  <!-- <ion-card class="top" > 
+      <p class="p-logo">REPORT PERHITUNGAN SUARA</p>
+  </ion-card> -->
+</ion-header>
+
+
+<ion-content padding>
+    
+ 
+    <!-- <ion-searchbar placeholder="Filter Items" [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar> -->
+    
+
+<ion-card inset *ngFor="let user of users" class="border">
+  <ion-item  >
+        <ion-row>
+                <!-- <ion-col col-8>
+                <h2 class="kabupaten">{{user.tps}}</h2>
+                 </ion-col>
+                <ion-col col-3>
+                <p class="suara">{{user.suara}}</p>
+                </ion-col> -->
+                <ion-col col-2>
+                <P class="lokasi">LOKASI :</P>
+                 </ion-col>
+                <ion-col col-9>
+                <p class="isiTPS">{{user.lokasi}}</p>
+                </ion-col>
+        
+        </ion-row>
+        <ion-row>
+                
+                <ion-col col-2>
+                <P class="suara">TPS :</P>
+                 </ion-col>
+                <ion-col col-9>
+                <p class="isiSuara">{{user.tps}}</p>
+                </ion-col>
+        
+        </ion-row>
+        <ion-row>
+                
+            <ion-col col-2>
+            <P class="suaraTeguh">JUMLAH SUARA Ir.H.Teguh :</P>
+             </ion-col>
+            <ion-col col-9>
+            <p class="isiTeguh">{{user.suara_teguh}}</p>
+            </ion-col>
+    
+    </ion-row>
+    <ion-row>
+                
+        <ion-col col-2>
+        <P class="suaraPan">JUMLAH SUARA CALEG PAN :</P>
+         </ion-col>
+        <ion-col col-9>
+        <p class="isiPan">{{user.suara_caleg_pan}}</p>
+        </ion-col>
+
+</ion-row>
+      <!-- <ion-row>
+          <ion-col col-8>
+              <p class="kabupaten"  *ngIf="user.tps" >{{user.tps}}</p>
+          </ion-col>
+          <ion-col col-3>
+              <p class="suara"  *ngIf="user.suara">{{user.suara}}</p>
+            </ion-col>
+        </ion-row> -->
+  </ion-item>
+</ion-card>
+</ion-content>
